@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/a-wizard-did-it/.mozilla/firefox'
+let g:netrw_dirhist_2='/home/a-wizard-did-it/.mozilla/firefox/vitkv6oh.default'
+let g:netrw_dirhist_3='/home/a-wizard-did-it/.mozilla/firefox/vitkv6oh.default/chrome'
+let g:netrw_dirhist_4='/home/a-wizard-did-it/.mozilla/firefox/vitkv6oh.default'
+let g:netrw_dirhist_5='/home/a-wizard-did-it/.mozilla/firefox/vitkv6oh.default/extensions'
+let g:netrw_dirhist_6='/home/a-wizard-did-it/.mozilla/firefox/vitkv6oh.default/extensions/{73a6fe31-595d-460b-a920-fcc0f8843232}'
+let g:netrw_dirhist_7='/home/a-wizard-did-it/.mozilla/firefox/vitkv6oh.default/extensions/{73a6fe31-595d-460b-a920-fcc0f8843232}/chrome'
+let g:netrw_dirhist_8='/home/a-wizard-did-it/.vim'
+let g:netrw_dirhist_9='/home/a-wizard-did-it/.pentadactyl'
