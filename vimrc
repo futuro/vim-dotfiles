@@ -1,5 +1,6 @@
 version 6.0
 if &cp | set nocp | endif
+let mapleader=" "
 let s:cpo_save=&cpo
 set novisualbell
 set cpo&vim
@@ -98,6 +99,10 @@ command -bang -complete=file -nargs=1 Wsession :mksession<bang> ~/.vim/sessions/
 command -nargs=1 -complete=file Lsession :source ~/.vim/sessions/<args>
 command Clear :0,100bdelete
 command -nargs=1 -bar -complete=file  Cload :Clear | :Lsession <args> 
+
+" Moving around in the error list (:cn :cp)
+map <Leader>c :cnext<CR>
+map <Leader>b :cpr<CR>
 
 " NERDTree bindings
 nmap <Leader>no :NERDTree<CR>
