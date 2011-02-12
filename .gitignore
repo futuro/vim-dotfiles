@@ -1,4 +1,3 @@
 # Ignore session files, as those depend on the specific file structure of whatever machine they came from.
 sessions/*
 *.netrwhist
-bundle/gundo.vim/
