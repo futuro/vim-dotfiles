@@ -68,7 +68,6 @@ set pastetoggle=<F11>
 set printoptions=paper:a4
 set pumheight=7
 set ruler
-set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 set shortmess=at
 set showcmd
 set showmatch
