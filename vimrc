@@ -61,7 +61,7 @@ set hidden
 set history=50
 set laststatus=2
 set listchars=eol:$,precedes:«,extends:»,tab:»·,trail:·
-set nomodeline
+set modeline
 set nostartofline
 set nu
 set pastetoggle=<F11>
