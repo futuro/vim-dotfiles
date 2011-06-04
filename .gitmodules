@@ -10,3 +10,9 @@
 [submodule "bundle/tcomment"]
 	path = bundle/tcomment
 	url = git://github.com/tomtom/tcomment_vim.git
+[submodule "bundle/theme-neverland"]
+	path = bundle/theme-neverland
+	url = git://github.com/trapd00r/neverland-vim-theme.git
+[submodule "bundle/perl-after_syntax"]
+	path = bundle/perl-after_syntax
+	url = git://github.com/trapd00r/vim-after-syntax-perl.git
