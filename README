@@ -1,6 +1,5 @@
-Installation:
-
-    git clone <wherever I decide to put this> ~/.vim
+This is the repository for my .vim files. To install it, follow the directions
+below.
 
 Create symlinks:
 
@@ -11,6 +10,7 @@ Switch to the `~/.vim` directory, and fetch submodules:
     cd ~/.vim
     git submodule init
     git submodule update
-    git submodule foreach git submodule init
-    git submodule foreach git submodule update
+    git submodule recursive git submodule init
+    git submodule recursive git submodule update
 
+ vim: tw=80
