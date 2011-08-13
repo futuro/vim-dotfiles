@@ -4,3 +4,6 @@ sessions/*
 
 # Changed on vim load
 doc/tags
+
+# swap files
+*.sw?
