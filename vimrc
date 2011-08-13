@@ -4,7 +4,6 @@ let mapleader=" "
 let s:cpo_save=&cpo
 set novisualbell
 set cpo&vim
-imap <F10> cit
 map ,kqs mz:%s/^> >/>>/
 map ,l __start__scmd
 map ,L 1G/Latest change:\s*/e+1CYDATE
@@ -42,8 +41,6 @@ iabbr YDATE =strftime("%a %b %d %T %Z %Y")
 let &cpo=s:cpo_save
 unlet s:cpo_save
 let g:moria_style='dark'
-"set cindent
-"set cinoptions=>2,e-2,n-2,{0,}0,^-2,:1,l1,b0,g1,p1,t0,+2,(0,u0,)30
 set autoindent smartindent
 set background=dark
 set backspace=2
@@ -90,45 +87,11 @@ runtime ftplugin/man.vim
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
 autocmd Filetype scheme source ~/.vim/ftplugin/SchemeMode.vim 
 
-command Cplusplustags :!ctags -R --c++-kinds=+cdefglmnpstuvx --fields=+iaS --extra=+q --language-force=C++ . <CR>
-command Ctags :!ctags -R --c-kinds=+cdefglmnpstuvx --fields=+S --extra=+f . <CR>
-
 " Session bindings
 command -bang -complete=file -nargs=1 Wsession :mksession<bang> ~/.vim/sessions/<args>
 command -nargs=1 -complete=file Lsession :source ~/.vim/sessions/<args>
 command Clear :0,100bdelete
 command -nargs=1 -bar -complete=file  Cload :Clear | :Lsession <args> 
-
-" Moving around in the error list (:cn :cp)
-map <Leader>c :cnext<CR>
-map <Leader>b :cpr<CR>
-
-" NERDTree bindings
-nmap <Leader>no :NERDTree<CR>
-nmap <Leader>nt :NERDTreeToggle<CR>
-nmap <Leader>nf :NERDTreeFind<CR>
-nmap <Leader>nm :NERDTreeMirror<CR>
-nmap <Leader>nc :NERDTreeClose<CR>
-
-" vim-latex
-let g:tex_flavor='latex'
-
-" Extra definitions
-set tags+=~/.vim/tags/cpp
-
-" OmniCppComplete
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-set completeopt=menuone,menu,longest,preview
-" vim: set ft=vim :
 
 " Perl
 let perl_fold = 1
