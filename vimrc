@@ -95,6 +95,12 @@ command -nargs=1 -complete=file Lsession :source ~/.vim/sessions/<args>
 command Clear :0,100bdelete
 command -nargs=1 -bar -complete=file  Cload :Clear | :Lsession <args> 
 
+" Window movement
+nmap <C-h> <C-W>h
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-l> <C-W>l
+
 " Perl
 let perl_fold = 1
 let perl_fold_blocks = 1
