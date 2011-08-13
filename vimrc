@@ -8,8 +8,8 @@ map ,kqs mz:%s/^> >/>>/
 map ,l __start__scmd
 map ,L 1G/Latest change:\s*/e+1CYDATE
 map ,e ^wy$:r!"
-vmap ;tr :s/\s\+$//
-nmap ;tr :%s/\s\+$//
+vmap <Leader>tr :s/\s\+$//
+nmap <Leader>tr :%s/\s\+$//
 "nmap <C-f9> :!ctags -R --c++-kinds=+cdefglmnpstuvx --fields=+iaS --extra=+q --language-force=C++ . <CR>
 " nmap <ESC>[20;5~ :!ctags -R --c++-kinds=+cdefglmnpstuvx --fields=+iaS --extra=+q --language-force=C++ . <CR>
 map \dk <Plug>DirDiffPrev
@@ -87,13 +87,13 @@ filetype plugin indent on
 runtime ftplugin/man.vim
 
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
-autocmd Filetype scheme source ~/.vim/ftplugin/SchemeMode.vim 
+autocmd Filetype scheme source ~/.vim/ftplugin/SchemeMode.vim
 
 " Session bindings
 command -bang -complete=file -nargs=1 Wsession :mksession<bang> ~/.vim/sessions/<args>
 command -nargs=1 -complete=file Lsession :source ~/.vim/sessions/<args>
 command Clear :0,100bdelete
-command -nargs=1 -bar -complete=file  Cload :Clear | :Lsession <args> 
+command -nargs=1 -bar -complete=file  Cload :Clear | :Lsession <args>
 
 " Window movement
 nmap <C-h> <C-W>h
