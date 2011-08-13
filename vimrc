@@ -83,7 +83,9 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
+
 runtime ftplugin/man.vim
+
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
 autocmd Filetype scheme source ~/.vim/ftplugin/SchemeMode.vim 
 
@@ -96,3 +98,5 @@ command -nargs=1 -bar -complete=file  Cload :Clear | :Lsession <args>
 " Perl
 let perl_fold = 1
 let perl_fold_blocks = 1
+
+" vim: set ft=vim :
