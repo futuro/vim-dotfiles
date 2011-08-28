@@ -10,7 +10,7 @@ Switch to the `~/.vim` directory, and fetch submodules:
     cd ~/.vim
     git submodule init
     git submodule update
-    git submodule recursive git submodule init
-    git submodule recursive git submodule update
+    git submodule foreach --recursive git submodule init
+    git submodule foreach --recursive git submodule update
 
  vim: tw=80
