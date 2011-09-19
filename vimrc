@@ -79,6 +79,9 @@ set window=60
 syn on
 colo wombat256
 
+" Better searching
+set ignorecase smartcase hlsearch
+
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
