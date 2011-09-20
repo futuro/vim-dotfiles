@@ -108,4 +108,14 @@ nmap <C-l> <C-W>l
 let perl_fold = 1
 let perl_fold_blocks = 1
 
+" fugitive options
+set statusline=%<%t\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" syntastic options
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_enable_signs=1
+
 " vim: set ft=vim :
