@@ -7,3 +7,6 @@ doc/tags
 
 # swap files
 *.sw?
+
+# spell files
+spellfile.add*
