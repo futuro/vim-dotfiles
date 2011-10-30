@@ -81,6 +81,7 @@ colo wombat256
 
 " Better searching
 set ignorecase smartcase hlsearch
+nnoremap <silent> <Leader>l :noh<CR>:redraw<CR>
 
 filetype off
 call pathogen#runtime_append_all_bundles()
