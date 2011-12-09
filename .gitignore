@@ -9,4 +9,5 @@ doc/tags
 *.sw?
 
 # spell files
-spellfile.add*
+spellfile.add
+spellfile.add.spl
