@@ -99,6 +99,11 @@ command -nargs=1 -complete=file Lsession :source ~/.vim/sessions/<args>
 command Clear :0,100bdelete
 command -nargs=1 -bar -complete=file  Cload :Clear | :Lsession <args>
 
+" LaTeX suite remapping
+" it maps ^j to jump to the next placeholder, which gets in the way of my
+" window movement mapping.
+nmap <C-space> <Plug>IMAP_JumpForward
+
 " Window movement
 nmap <C-h> <C-W>h
 nmap <C-j> <C-W>j
@@ -118,5 +123,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_enable_signs=1
+
+" LaTeX options
+let g:tex_flavor='latex'
 
 " vim: set ft=vim :
