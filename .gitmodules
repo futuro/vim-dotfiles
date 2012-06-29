@@ -46,3 +46,6 @@
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/perlomni"]
+	path = bundle/perlomni
+	url = git://github.com/vim-scripts/perlomni.vim.git
