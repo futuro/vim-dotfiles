@@ -44,7 +44,7 @@ let g:moria_style='dark'
 set autoindent smartindent
 set background=dark
 set backspace=2
-set backupcopy=no
+set backupcopy=auto
 set comments=b:#,:%,fb:-,n:>,n:)
 set dictionary=/usr/share/dict/word
 set directory^=$HOME/.vim/swap//
