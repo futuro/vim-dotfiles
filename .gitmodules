@@ -49,3 +49,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "bundle/perlomni"]
+	path = bundle/perlomni
+	url = git://github.com/vim-scripts/perlomni.vim.git
