@@ -46,7 +46,7 @@ set background=dark
 set backspace=2
 set backupcopy=auto
 set comments=b:#,:%,fb:-,n:>,n:)
-set dictionary=/usr/share/dict/word
+set dictionary=/usr/share/dict/words
 set directory^=$HOME/.vim/swap//
 set fileencodings=ucs-bom,utf-8,default,latin1
 set foldenable
