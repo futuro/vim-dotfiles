@@ -72,7 +72,7 @@ set spellfile=~/.vim/spellfile.add
 set spellsuggest=best,10
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,,
 set tags=./tags,./TAGS,tags,TAGS,../tags,../../tags,../../../tags,../../../../tags
-set viminfo=%,'50,\"100,:100,n~/.viminfo
+set viminfo='50,\"100,:100
 set whichwrap=<,>,h,l
 set wildmenu
 set window=60
