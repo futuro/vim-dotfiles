@@ -48,6 +48,7 @@ set backupcopy=auto
 set comments=b:#,:%,fb:-,n:>,n:)
 set dictionary=/usr/share/dict/words
 set directory^=$HOME/.vim/swap//
+set encoding=unicode
 set fileencodings=ucs-bom,utf-8,default,latin1
 set foldenable
 set foldmethod=syntax
