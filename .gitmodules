@@ -16,6 +16,7 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://gitorious.org/command-t/command-t.git
+	branch = master
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
