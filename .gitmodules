@@ -46,3 +46,7 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://gitorious.org/command-t/command-t.git
+	branch = master
