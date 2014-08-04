@@ -13,10 +13,6 @@
 [submodule "bundle/perl-after_syntax"]
 	path = bundle/perl-after_syntax
 	url = git://github.com/trapd00r/vim-after-syntax-perl.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = git://gitorious.org/command-t/command-t.git
-	branch = master
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
