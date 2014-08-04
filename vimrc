@@ -48,8 +48,8 @@ set backupcopy=auto
 set comments=b:#,:%,fb:-,n:>,n:)
 set dictionary=/usr/share/dict/words
 set directory^=$HOME/.vim/swap//
-set encoding=unicode
-set fileencodings=ucs-bom,utf-8,default,latin1
+"set encoding=unicode
+set fileencodings=utf-8,default,latin1
 set foldenable
 set foldmethod=syntax
 set formatoptions=cqrt
@@ -58,7 +58,7 @@ set helplang=en
 set hidden
 set history=50
 set laststatus=2
-set listchars=eol:$,precedes:«,extends:»,tab:»·,trail:·
+set listchars=eol:$,precedes:Â«,extends:Â»,tab:Â»Â·,trail:Â·
 set modeline
 set nostartofline
 set nu
@@ -128,4 +128,4 @@ let g:syntastic_enable_signs=1
 " LaTeX options
 let g:tex_flavor='latex'
 
-" vim: set ft=vim :
+" vim: ft=vim :
