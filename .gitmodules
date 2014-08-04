@@ -4,9 +4,6 @@
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
-[submodule "bundle/vim-conque"]
-	path = bundle/vim-conque
-	url = git://github.com/rson/vim-conque.git
 [submodule "bundle/theme-neverland"]
 	path = bundle/theme-neverland
 	url = git://github.com/trapd00r/neverland-vim-theme.git
