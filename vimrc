@@ -78,7 +78,6 @@ set whichwrap=<,>,h,l
 set wildmenu
 set window=60
 syn on
-colo wombat256
 
 " Better searching
 set ignorecase smartcase hlsearch
@@ -89,6 +88,7 @@ filetype plugin indent on
 " vim-plug biz
 call plug#begin('~/.vim/plugged')
 
+Plug 'dsolstad/vim-wombat256i'
 Plug 'tpope/vim-fugitive'
 Plug 'sjl/gundo.vim'
 Plug 'trapd00r/neverland-vim-theme'
@@ -107,6 +107,8 @@ Plug 'godlygeek/tabular'
 Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && ruby extconf.rb && make' }
 
 call plug#end()
+
+colo wombat256i
 
 runtime ftplugin/man.vim
 
