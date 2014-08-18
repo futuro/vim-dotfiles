@@ -84,10 +84,29 @@ colo wombat256
 set ignorecase smartcase hlsearch
 nnoremap <silent> <Leader>l :noh<CR>:redraw<CR>
 
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 filetype plugin indent on
+
+" vim-plug biz
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-fugitive'
+Plug 'sjl/gundo.vim'
+Plug 'trapd00r/neverland-vim-theme'
+Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'vim-scripts/snipMate'
+Plug 'edsono/vim-matchit'
+Plug 'ehamberg/vim-cute-python', { 'for': 'python' }
+Plug 'fholgado/minibufexpl.vim'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'
+Plug 'http://git.code.sf.net/p/vim-latex/vim-latex', { 'for': 'tex' }
+Plug 'Lokaltog/vim-easymotion'
+Plug 'godlygeek/tabular'
+Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && ruby extconf.rb && make' }
+
+call plug#end()
 
 runtime ftplugin/man.vim
 

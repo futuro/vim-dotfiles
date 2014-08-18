@@ -11,3 +11,6 @@ doc/tags
 # spell files
 spellfile.add
 spellfile.add.spl
+
+# plugged directory
+plugged
