@@ -1,4 +1,4 @@
-version 6.0
+scriptencoding utf-8
 if &cp | set nocp | endif
 let mapleader=" "
 let s:cpo_save=&cpo
