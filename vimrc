@@ -105,8 +105,11 @@ Plug 'http://git.code.sf.net/p/vim-latex/vim-latex', { 'for': 'tex' }
 Plug 'Lokaltog/vim-easymotion'
 Plug 'godlygeek/tabular'
 Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && ruby extconf.rb && make' }
+Plug 'sophacles/vim-processing'
 
 call plug#end()
+
+let g:processing_fold = 1
 
 colo wombat256i
 
