@@ -146,6 +146,8 @@ set statusline=%<%t\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_javascript_checkers = [ "jslint" ]
+let g:syntastic_jslint_exec = "~/bin/jslint"
 
 let g:syntastic_enable_signs=1
 
