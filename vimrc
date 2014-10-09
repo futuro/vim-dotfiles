@@ -16,15 +16,6 @@ map \dk <Plug>DirDiffPrev
 map \dj <Plug>DirDiffNext
 map \dp <Plug>DirDiffPut
 map \dg <Plug>DirDiffGet
-map \pull :!hg pull:e!
-map \upd :!hg update:e!
-map \stat :call ShowResults("RepoStatus", "hg\ status")
-map \an :call ShowResults("annotate", "hg\ annotate")
-map \log :call ShowResults("FileLog", "hg\ log")
-map \revert :!hg revert %:e!
-map \diff :call ShowResults("FileDiff", "hg\ diff")
-map \fgt :!hg forget %
-map \add :!hg add %
 noremap __scmd :r !print -P $PS1A
 noremap __cmd 0f>ly$:r !";print -P $PS1A
 noremap __end :iunmap |iunmap :"Vish ended.
