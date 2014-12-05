@@ -97,6 +97,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'godlygeek/tabular'
 Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && ruby extconf.rb && make' }
 Plug 'sophacles/vim-processing'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang', 'for': 'cpp' }
 
 call plug#end()
 
