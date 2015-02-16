@@ -97,7 +97,8 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'godlygeek/tabular'
 Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && ruby extconf.rb && make' }
 Plug 'sophacles/vim-processing'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang', 'for': 'cpp' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang', 'for': ['cpp', 'javascript'] }
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 
 call plug#end()
 
@@ -109,6 +110,7 @@ runtime ftplugin/man.vim
 
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
 autocmd Filetype scheme source ~/.vim/ftplugin/SchemeMode.vim
+autocmd Filetype json set et sw=4 ts=4
 
 " Session bindings
 command -bang -complete=file -nargs=1 Wsession :mksession<bang> ~/.vim/sessions/<args>
@@ -138,10 +140,16 @@ set statusline=%<%t\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_javascript_checkers = [ "jslint" ]
-let g:syntastic_jslint_exec = "~/bin/jslint"
+let g:syntastic_javascript_checkers = [ "jshint" ]
+let g:syntastic_javascript_jshint_exec = "~/bin/jshint"
+let g:syntastic_always_populate_loc_list=1
 
 let g:syntastic_enable_signs=1
+
+" YouCompleteMe options
+let g:ycm_server_log_level = 'critical'
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_add_preview_to_completeopt = 1
 
 " LaTeX options
 let g:tex_flavor='latex'
