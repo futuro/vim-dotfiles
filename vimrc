@@ -104,7 +104,13 @@ call plug#end()
 
 let g:processing_fold = 1
 
-colo wombat256i
+" Set options related to ui, based on whether we're in gvim or not.
+if has('gui_running')
+    set go=aegi
+    colo wombat256
+else
+    colo wombat256i
+endif
 
 runtime ftplugin/man.vim
 
