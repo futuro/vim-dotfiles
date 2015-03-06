@@ -107,6 +107,7 @@ let g:processing_fold = 1
 " Set options related to ui, based on whether we're in gvim or not.
 if has('gui_running')
     set go=aegi
+    set guifont=Terminus\ 9
     colo wombat256
 else
     colo wombat256i
