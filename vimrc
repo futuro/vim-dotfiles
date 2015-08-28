@@ -95,7 +95,7 @@ Plug 'scrooloose/syntastic'
 Plug 'http://git.code.sf.net/p/vim-latex/vim-latex', { 'for': 'tex' }
 Plug 'Lokaltog/vim-easymotion'
 Plug 'godlygeek/tabular'
-Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && ruby extconf.rb && make' }
+Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && ruby extconf.rb && make clean && make' }
 Plug 'sophacles/vim-processing'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang', 'for': ['cpp', 'javascript'] }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
