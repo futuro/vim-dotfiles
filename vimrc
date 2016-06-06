@@ -98,11 +98,18 @@ Plug 'godlygeek/tabular'
 Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && ruby extconf.rb && make clean && make' }
 Plug 'sophacles/vim-processing'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang', 'for': ['cpp', 'javascript'] }
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': ['javascript','javascript.jsx'] }
+Plug 'pangloss/vim-javascript', { 'for' : ['javascript','javascript.jsx'] }
+Plug 'mxw/vim-jsx', { 'for' : ['javascript','javascript.jsx'] }
+Plug 'jiangmiao/auto-pairs'
+"Plug 'vim-scripts/closetag.vim'
+Plug 'mattn/emmet-vim', { 'for' : ['javascript', 'html', 'javascript.jsx']  }
 
 call plug#end()
 
 let g:processing_fold = 1
+
+let g:jsx_ext_required = 0
 
 " Set options related to ui, based on whether we're in gvim or not.
 if has('gui_running')
@@ -116,8 +123,12 @@ endif
 runtime ftplugin/man.vim
 
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
+autocmd Filetype html,xml,xsl setlocal fdm=indent
 autocmd Filetype scheme source ~/.vim/ftplugin/SchemeMode.vim
-autocmd Filetype json set et sw=4 ts=4
+autocmd Filetype json set et sw=2 ts=2
+autocmd Filetype javascript,javascript.jsx set et sw=2 ts=2
+autocmd BufNewFile,BufRead *.boot set filetype=clojure
+autocmd BufNewFile,BufRead .babelrc set filetype=json
 
 " Session bindings
 command -bang -complete=file -nargs=1 Wsession :mksession<bang> ~/.vim/sessions/<args>
@@ -147,8 +158,8 @@ set statusline=%<%t\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_javascript_checkers = [ "jshint" ]
-let g:syntastic_javascript_jshint_exec = "~/bin/jshint"
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = '~/.node_modules/bin/eslint'
 let g:syntastic_always_populate_loc_list=1
 
 let g:syntastic_enable_signs=1
@@ -160,5 +171,8 @@ let g:ycm_add_preview_to_completeopt = 1
 
 " LaTeX options
 let g:tex_flavor='latex'
+
+" Command-T options
+let g:CommandTWildIgnore=&wildignore . ",*/node_modules"
 
 " vim: ft=vim :
