@@ -4,29 +4,16 @@ let mapleader=" "
 let s:cpo_save=&cpo
 set novisualbell
 set cpo&vim
-map ,kqs mz:%s/^> >/>>/
-map ,l __start__scmd
-map ,L 1G/Latest change:\s*/e+1CYDATE
-map ,e ^wy$:r!"
-vmap <Leader>tr :s/\s\+$//
-nmap <Leader>tr :%s/\s\+$//
-"nmap <C-f9> :!ctags -R --c++-kinds=+cdefglmnpstuvx --fields=+iaS --extra=+q --language-force=C++ . <CR>
-" nmap <ESC>[20;5~ :!ctags -R --c++-kinds=+cdefglmnpstuvx --fields=+iaS --extra=+q --language-force=C++ . <CR>
-map \dk <Plug>DirDiffPrev
-map \dj <Plug>DirDiffNext
-map \dp <Plug>DirDiffPut
-map \dg <Plug>DirDiffGet
 noremap __scmd :r !print -P $PS1A
 noremap __cmd 0f>ly$:r !";print -P $PS1A
 noremap __end :iunmap |iunmap :"Vish ended.
 map __start :imap  __cmd|imap  __end
 nmap gx <Plug>NetrwBrowseX
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
-map <F12> :set spell!|:echo "Spell Check: " . strpart("OffOn", 3 * &spell, 3)
-map <S-F7> :r!xclip -o
-vmap <F7> "*y
-nmap <F7> :w !xclip
-omap <F7> :w !xclip
+"map <S-F7> :r!xclip -o
+"vmap <F7> "*y
+"nmap <F7> :w !xclip
+"omap <F7> :w !xclip
 inoremap kj <Esc>
 iabbr YDATE =strftime("%a %b %d %T %Z %Y")
 let &cpo=s:cpo_save
@@ -92,7 +79,6 @@ Plug 'fholgado/minibufexpl.vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
-Plug 'http://git.code.sf.net/p/vim-latex/vim-latex', { 'for': 'tex' }
 Plug 'Lokaltog/vim-easymotion'
 Plug 'godlygeek/tabular'
 Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && ruby extconf.rb && make clean && make' }
@@ -136,11 +122,6 @@ command -nargs=1 -complete=file Lsession :source ~/.vim/sessions/<args>
 command Clear :0,100bdelete
 command -nargs=1 -bar -complete=file  Cload :Clear | :Lsession <args>
 
-" LaTeX suite remapping
-" it maps ^j to jump to the next placeholder, which gets in the way of my
-" window movement mapping.
-nmap <C-space> <Plug>IMAP_JumpForward
-
 " Window movement
 nmap <C-h> <C-W>h
 nmap <C-j> <C-W>j
@@ -168,9 +149,6 @@ let g:syntastic_enable_signs=1
 let g:ycm_server_log_level = 'critical'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
-
-" LaTeX options
-let g:tex_flavor='latex'
 
 " Command-T options
 let g:CommandTWildIgnore=&wildignore . ",*/node_modules"
