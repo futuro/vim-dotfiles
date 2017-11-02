@@ -72,8 +72,15 @@ Plug 'sjl/gundo.vim'
 Plug 'trapd00r/neverland-vim-theme'
 Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
 Plug 'scrooloose/nerdcommenter'
-Plug 'vim-scripts/snipMate'
-Plug 'edsono/vim-matchit'
+
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+" CoffeeScript
+Plug 'kchmck/vim-coffee-script'
+
+"Plug 'edsono/vim-matchit'
 Plug 'ehamberg/vim-cute-python', { 'for': 'python' }
 Plug 'fholgado/minibufexpl.vim'
 Plug 'tpope/vim-unimpaired'
@@ -81,15 +88,24 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'godlygeek/tabular'
-Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && ruby extconf.rb && make clean && make' }
+Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make clean && make' }
 Plug 'sophacles/vim-processing'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang', 'for': ['cpp', 'javascript'] }
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': ['javascript','javascript.jsx'] }
-Plug 'pangloss/vim-javascript', { 'for' : ['javascript','javascript.jsx'] }
-Plug 'mxw/vim-jsx', { 'for' : ['javascript','javascript.jsx'] }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --tern-completer' }
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+Plug 'flowtype/vim-flow', { 'for': 'javascript' }
+
+" While these could have a "for" declaration, that causes the system js files
+" to be loaded, and we lose proper formatting. As such, they need to be loaded
+" like everything else.
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
 Plug 'jiangmiao/auto-pairs'
 "Plug 'vim-scripts/closetag.vim'
 Plug 'mattn/emmet-vim', { 'for' : ['javascript', 'html', 'javascript.jsx']  }
+
+" Make sure we read editorconfig's properly
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
@@ -97,10 +113,12 @@ let g:processing_fold = 1
 
 let g:jsx_ext_required = 0
 
+let g:javascript_plugin_flow = 1
+
 " Set options related to ui, based on whether we're in gvim or not.
 if has('gui_running')
     set go=aegi
-    set guifont=Terminus\ 9
+    set guifont=Terminess\ Powerline\ 9
     colo wombat256
 else
     colo wombat256i
@@ -113,14 +131,19 @@ autocmd Filetype html,xml,xsl setlocal fdm=indent
 autocmd Filetype scheme source ~/.vim/ftplugin/SchemeMode.vim
 autocmd Filetype json set et sw=2 ts=2
 autocmd Filetype javascript,javascript.jsx set et sw=2 ts=2
+autocmd Filetype javascript,javascript.jsx let NERDSpaceDelims=1
 autocmd BufNewFile,BufRead *.boot set filetype=clojure
 autocmd BufNewFile,BufRead .babelrc set filetype=json
+autocmd BufNewFile,BufRead .tmux.conf set filetype=conf
 
 " Session bindings
 command -bang -complete=file -nargs=1 Wsession :mksession<bang> ~/.vim/sessions/<args>
 command -nargs=1 -complete=file Lsession :source ~/.vim/sessions/<args>
 command Clear :0,100bdelete
 command -nargs=1 -bar -complete=file  Cload :Clear | :Lsession <args>
+
+" Set some emmet options
+let g:user_emmet_mode='i'
 
 " Window movement
 nmap <C-h> <C-W>h
@@ -146,11 +169,16 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_enable_signs=1
 
 " YouCompleteMe options
-let g:ycm_server_log_level = 'critical'
+let g:ycm_log_level = 'info'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 
 " Command-T options
 let g:CommandTWildIgnore=&wildignore . ",*/node_modules"
+
+" Snippet configs
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " vim: ft=vim :
