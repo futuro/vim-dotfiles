@@ -1,23 +1,32 @@
 scriptencoding utf-8
 if &cp | set nocp | endif
+
+" I've found space to be a much nicer mapleader than the default
 let mapleader=" "
+
+" Hold onto the compatability options for resetting later
 let s:cpo_save=&cpo
+
+" Kill the bell
 set novisualbell
+
+" Reset the compatability options to the vim default
 set cpo&vim
-noremap __scmd :r !print -P $PS1A
-noremap __cmd 0f>ly$:r !";print -P $PS1A
-noremap __end :iunmap |iunmap :"Vish ended.
-map __start :imap  __cmd|imap  __end
-nmap gx <Plug>NetrwBrowseX
-nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
-"map <S-F7> :r!xclip -o
-"vmap <F7> "*y
-"nmap <F7> :w !xclip
-"omap <F7> :w !xclip
+
+" Map a more convenient key sequence for escape in insert mode
 inoremap kj <Esc>
+
+" Let's have stronger encryption, just in case we use it
+set cryptmethod=blowfish2
+
+" I don't really use this anymore, but I really like it so I'm keeping it
 iabbr YDATE =strftime("%a %b %d %T %Z %Y")
+
+" Change the compat options back to what they were
+" Do I even use this? Where'd it come from?
 let &cpo=s:cpo_save
 unlet s:cpo_save
+
 let g:moria_style='dark'
 set autoindent smartindent
 set background=dark
@@ -66,12 +75,15 @@ filetype plugin indent on
 " vim-plug biz
 call plug#begin('~/.vim/plugged')
 
+" Syntax files
 Plug 'dsolstad/vim-wombat256i'
-Plug 'tpope/vim-fugitive'
-Plug 'sjl/gundo.vim'
 Plug 'trapd00r/neverland-vim-theme'
 Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
-Plug 'scrooloose/nerdcommenter'
+
+" Misc utility
+Plug 'tpope/vim-fugitive' " Git support
+Plug 'sjl/gundo.vim' " Graphical undo
+Plug 'scrooloose/nerdcommenter' " Nice comment toggling
 
 " Snippets
 Plug 'SirVer/ultisnips'
