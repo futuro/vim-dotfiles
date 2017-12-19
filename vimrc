@@ -118,7 +118,7 @@ let g:javascript_plugin_flow = 1
 " Set options related to ui, based on whether we're in gvim or not.
 if has('gui_running')
     set go=aegi
-    set guifont=Terminess\ Powerline\ 9
+    set guifont=xos4\ Terminess\ Powerline\ 14
     colo wombat256
 else
     colo wombat256i
