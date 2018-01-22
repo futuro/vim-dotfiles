@@ -37,7 +37,7 @@ set dictionary=/usr/share/dict/words
 set directory^=$HOME/.vim/swap//
 "set encoding=unicode
 set fileencodings=utf-8,default,latin1
-set foldenable
+set nofoldenable " Start new buffers with folds open
 set foldmethod=syntax
 set formatoptions=cqrt
 set grepprg=grep\ -nH\ $*
@@ -48,7 +48,7 @@ set laststatus=2
 set listchars=eol:$,precedes:«,extends:»,tab:»·,trail:·
 set modeline
 set nostartofline
-set nu
+set number " enable line numbers in left gutter
 set pastetoggle=<F11>
 set printoptions=paper:a4
 set pumheight=7
