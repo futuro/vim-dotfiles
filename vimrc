@@ -126,6 +126,13 @@ Plug 'mattn/emmet-vim', { 'for' : ['javascript', 'html', 'javascript.jsx']  }
 " Make sure we read editorconfig's properly
 Plug 'editorconfig/editorconfig-vim'
 
+" I've found navigating the chef repo a little cumbersome with just command-t,
+" so let's bring in Nerdtree
+Plug 'scrooloose/nerdtree'
+
+" Chef
+Plug 'robbles/logstash.vim'
+
 call plug#end()
 
 let g:processing_fold = 1
@@ -193,7 +200,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 
 " Command-T options
-let g:CommandTWildIgnore=&wildignore . ",*/node_modules"
+set wildignore+=*/node_modules,*/.git,*.s[a-w][a-z]
+"let g:CommandTWildIgnore=&wildignore . ",*/node_modules,*/.git,.*.swp"
 
 " Snippet configs
 let g:UltiSnipsExpandTrigger="<c-s>"
