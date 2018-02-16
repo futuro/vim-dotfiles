@@ -92,11 +92,18 @@ Plug 'honza/vim-snippets'
 " CoffeeScript
 Plug 'kchmck/vim-coffee-script'
 
+" Clojure
+Plug 'guns/vim-sexp', { 'for': 'clojure' } " Precision Editing for S-expressions
+Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
+
+" Misc tpope plugins
+Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with `.`
+Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple
+Plug 'tpope/vim-unimpaired' " Pairs of handy bracket mappings
+
 "Plug 'edsono/vim-matchit'
 Plug 'ehamberg/vim-cute-python', { 'for': 'python' }
 Plug 'fholgado/minibufexpl.vim'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'godlygeek/tabular'
