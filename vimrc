@@ -210,4 +210,4 @@ let g:UltiSnipsExpandTrigger="<c-s>"
 let g:UltiSnipsJumpForwardTrigger="<c-m-d>"
 let g:UltiSnipsJumpBackwardTrigger="<c-m-s>"
 
-" vim: ft=vim :
+" vim: ft=vim et ts=4 sw=4:
