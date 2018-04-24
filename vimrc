@@ -207,7 +207,7 @@ set wildignore+=*/node_modules,*/.git,*.s[a-w][a-z]
 
 " Snippet configs
 let g:UltiSnipsExpandTrigger="<c-s>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-m-d>"
+let g:UltiSnipsJumpBackwardTrigger="<c-m-s>"
 
 " vim: ft=vim :
