@@ -17,7 +17,9 @@ set cpo&vim
 inoremap kj <Esc>
 
 " Let's have stronger encryption, just in case we use it
-set cryptmethod=blowfish2
+if has('cryptmethod')
+    set cryptmethod=blowfish2
+endif
 
 " I don't really use this anymore, but I really like it so I'm keeping it
 iabbr YDATE =strftime("%a %b %d %T %Z %Y")
