@@ -163,6 +163,7 @@ autocmd Filetype javascript,javascript.jsx let NERDSpaceDelims=1
 autocmd BufNewFile,BufRead *.boot set filetype=clojure
 autocmd BufNewFile,BufRead .babelrc set filetype=json
 autocmd BufNewFile,BufRead .tmux.conf set filetype=conf
+autocmd BufNewFile,BufRead *.hledger/journal set et ts=4 sw=4
 
 " Session bindings
 command -bang -complete=file -nargs=1 Wsession :mksession<bang> ~/.vim/sessions/<args>
@@ -209,5 +210,8 @@ set wildignore+=*/node_modules,*/.git,*.s[a-w][a-z]
 let g:UltiSnipsExpandTrigger="<c-s>"
 let g:UltiSnipsJumpForwardTrigger="<c-m-d>"
 let g:UltiSnipsJumpBackwardTrigger="<c-m-s>"
+
+" Store a macro in register e to join my transactions
+let e='0f,;hDj02df"kJxf,Dj02dt,kJx'
 
 " vim: ft=vim et ts=4 sw=4:
