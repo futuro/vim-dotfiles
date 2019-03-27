@@ -14,3 +14,4 @@ spellfile.add.spl
 
 # plugged directory
 plugged
+autoload/plug.vim.old
