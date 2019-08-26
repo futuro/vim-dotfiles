@@ -79,6 +79,7 @@ call plug#begin('~/.vim/plugged')
 
 " Syntax files
 Plug 'dsolstad/vim-wombat256i'
+Plug 'jnurmine/Zenburn'
 Plug 'trapd00r/neverland-vim-theme'
 Plug 'trapd00r/vim-after-syntax-perl', { 'for': 'perl' }
 
@@ -111,7 +112,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'godlygeek/tabular'
 Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make clean && make' }
 Plug 'sophacles/vim-processing'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --tern-completer' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --tern-completer' }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'flowtype/vim-flow', { 'for': 'javascript' }
 
@@ -147,9 +148,9 @@ let g:javascript_plugin_flow = 1
 if has('gui_running')
     set go=aegi
     set guifont=xos4\ Terminess\ Powerline\ 14
-    colo wombat256
+    colo zenburn
 else
-    colo wombat256i
+    colo zenburn
 endif
 
 runtime ftplugin/man.vim
@@ -194,6 +195,7 @@ set statusline+=%*
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = '~/.node_modules/bin/eslint'
 let g:syntastic_always_populate_loc_list=1
+let g:syntastic_yaml_checkers = ['yamllint']
 
 let g:syntastic_enable_signs=1
 
