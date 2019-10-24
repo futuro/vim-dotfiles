@@ -185,6 +185,11 @@ nmap <C-l> <C-W>l
 let perl_fold = 1
 let perl_fold_blocks = 1
 
+"" Ruby
+" fdm=syntax slows vim down drastically on ruby files, so use indent or manual
+" instead
+autocmd Filetype ruby setlocal foldmethod=indent
+
 " fugitive options
 set statusline=%<%t\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
