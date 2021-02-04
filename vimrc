@@ -89,11 +89,7 @@ Plug 'sjl/gundo.vim' " Graphical undo
 Plug 'scrooloose/nerdcommenter' " Nice comment toggling
 
 " Snippets
-Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
-" CoffeeScript
-Plug 'kchmck/vim-coffee-script'
 
 " Clojure
 Plug 'guns/vim-sexp', { 'for': 'clojure' } " Precision Editing for S-expressions
@@ -104,7 +100,6 @@ Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with `.`
 Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple
 Plug 'tpope/vim-unimpaired' " Pairs of handy bracket mappings
 
-"Plug 'edsono/vim-matchit'
 Plug 'ehamberg/vim-cute-python', { 'for': 'python' }
 Plug 'fholgado/minibufexpl.vim'
 Plug 'scrooloose/syntastic'
@@ -123,18 +118,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
 Plug 'jiangmiao/auto-pairs'
-"Plug 'vim-scripts/closetag.vim'
 Plug 'mattn/emmet-vim', { 'for' : ['javascript', 'html', 'javascript.jsx']  }
 
 " Make sure we read editorconfig's properly
 Plug 'editorconfig/editorconfig-vim'
-
-" I've found navigating the chef repo a little cumbersome with just command-t,
-" so let's bring in Nerdtree
-Plug 'scrooloose/nerdtree'
-
-" Chef
-Plug 'robbles/logstash.vim'
 
 call plug#end()
 
@@ -212,11 +199,6 @@ let g:ycm_add_preview_to_completeopt = 1
 " Command-T options
 set wildignore+=*/node_modules,*/.git,*.s[a-w][a-z]
 "let g:CommandTWildIgnore=&wildignore . ",*/node_modules,*/.git,.*.swp"
-
-" Snippet configs
-let g:UltiSnipsExpandTrigger="<c-s>"
-let g:UltiSnipsJumpForwardTrigger="<c-m-d>"
-let g:UltiSnipsJumpBackwardTrigger="<c-m-s>"
 
 " Store a macro in register e to join my transactions
 let e='0f,;hDj02df"kJxf,Dj02dt,kJx'
